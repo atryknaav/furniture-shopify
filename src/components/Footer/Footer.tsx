@@ -1,4 +1,5 @@
-import { ArrowUpIcon } from '@radix-ui/react-icons'
+"use client";
+
 import React from 'react'
 import { FaArrowUp, FaPinterest } from 'react-icons/fa'
 import { FaFacebook, FaInstagram, FaTiktok, FaTwitter } from 'react-icons/fa6'
