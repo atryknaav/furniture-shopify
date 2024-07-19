@@ -1,3 +1,4 @@
+import { ArrowUpIcon } from '@radix-ui/react-icons'
 import React from 'react'
 import { FaArrowUp, FaPinterest } from 'react-icons/fa'
 import { FaFacebook, FaInstagram, FaTiktok, FaTwitter } from 'react-icons/fa6'
@@ -82,7 +83,11 @@ const Footer = () => {
             </div>
 
 
-            <div className=' border-[2px] rounded-full border-white p-6 h-fit text-6xl hover:scale-110 transition-all duration-200 hover:cursor-pointer flex content-end'>
+            <div className=' border-[2px] rounded-full border-white p-6 h-fit text-6xl hover:scale-110 transition-all duration-200 hover:cursor-pointer flex content-end' onClick={
+                () => {
+                    window.scroll(0, 0)
+                }
+            }>
             <GoArrowUp />
             </div>
 
@@ -108,7 +113,7 @@ const Footer = () => {
 
 
         <div className=' bg-white text-red-700 flex justify-end pr-10 text-sm font-semibold'>
-        {year} @ THIS SITE IS CREATED USING THE CONTENT OF THE OFFICIAL DANGARDEN SITE AND DESIGN <a href="https://dangarden.se/" className=' ml-12 text-green-600'>OFFICIAL SITE</a> <a href="https://www.behance.net/gallery/198258093/Shopify-Website-UXUI-Design-Development-Dangarden" className=' ml-12 text-green-600'>OFFICIAL DESIGN</a>
+        {year} @ THIS SITE IS CREATED USING THE CONTENT OF THE OFFICIAL DANGARDEN WEBSITE AND DESIGN <a href="https://dangarden.se/" className=' ml-12 text-green-600'>WEBSITE</a> <a href="https://www.behance.net/gallery/198258093/Shopify-Website-UXUI-Design-Development-Dangarden" className=' ml-12 text-green-600'>DESIGN</a>
         </div>
 
     </div>
