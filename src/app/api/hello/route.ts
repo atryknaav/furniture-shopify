@@ -8,5 +8,5 @@ type Data = {
 export async function GET(
   req: Request,
 ) {
-  return new Response('HI')
+  return new Response(process.env.MONGO_URL)
 }

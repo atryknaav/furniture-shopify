@@ -2,9 +2,10 @@
 
 import React from 'react'
 import Carousel from 'react-multi-carousel';
-// import WithStyles from 'react-multi-carousel';
+import WithStyles from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 import Product from './Product';
+// import item from '../../app/product/test';
 
 const CarouselElement = () => {
   return (
@@ -66,9 +67,10 @@ const CarouselElement = () => {
 <Product image='/ProductCarousel/3.png' name='VENTURE HOME' description='ROSARIO matbord + 6st WEMBLEY matstol' price='17 995' />
 <Product image='/ProductCarousel/4.png' name='DANGARDEN' description='ONE DEAL' price='13 495' />
 <Product image='/ProductCarousel/5.png' name='DANGARDEN' description='Specialpris UMAMI utekok modul 1 + 2' price='12 285' />
-<Product image='/ProductCarousel/6.png' name='NAPOLEON' description='Napoleon Rogue 425-1SE Phantom' price='17 995' />
+<Product image='/ProductCarousel/6.png' name='NAPOLEON' description='Napoleon Rogue 425-1SE Phantom' price={'17 995'} />
 
 </Carousel>
+
   )
 }
 

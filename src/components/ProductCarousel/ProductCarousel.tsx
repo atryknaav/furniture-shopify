@@ -1,6 +1,6 @@
 import React from 'react'
 import CarouselElement from './Carousel'
-import { GoChevronRight } from 'react-icons/go'
+import { ChevronRightIcon } from '@radix-ui/react-icons'
 
 const ProductCarousel = () => {
   return (
@@ -12,7 +12,7 @@ const ProductCarousel = () => {
         </div>
 
         <div className=' font-normal text-xl p-12 flex gap-2 items-center align-middle hover:underline underline-offset-4 h-fit w-fit'>
-        TO CAMPAIGNS <GoChevronRight />
+        TO CAMPAIGNS <ChevronRightIcon />
         </div>
 
       </div>
