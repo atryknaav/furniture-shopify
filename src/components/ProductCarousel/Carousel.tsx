@@ -62,12 +62,12 @@ const CarouselElement = () => {
   slidesToSlide={1}
   swipeable
 >
-<Product image='/ProductCarousel/1.png' name='DANGARDEN' description='UMAMI+KAMADO BONO LIMITED,svart' price='19 955' />
-<Product image='/ProductCarousel/2.png' name='VENTURE HOME' description='DAVAO soffgrupp med soffbord' price='7 995' />
-<Product image='/ProductCarousel/3.png' name='VENTURE HOME' description='ROSARIO matbord + 6st WEMBLEY matstol' price='17 995' />
-<Product image='/ProductCarousel/4.png' name='DANGARDEN' description='ONE DEAL' price='13 495' />
-<Product image='/ProductCarousel/5.png' name='DANGARDEN' description='Specialpris UMAMI utekok modul 1 + 2' price='12 285' />
-<Product image='/ProductCarousel/6.png' name='NAPOLEON' description='Napoleon Rogue 425-1SE Phantom' price={'17 995'} />
+<Product image='/ProductCarousel/1.png' name='DANGARDEN' description='UMAMI+KAMADO BONO LIMITED,svart' price='19 955' id='66a1cea28141f0712cc994cb'/>
+{/* <Product image='/ProductCarousel/2.png' name='VENTURE HOME' description='DAVAO soffgrupp med soffbord' price='7 995' /> */}
+<Product image='/ProductCarousel/3.png' name='VENTURE HOME' description='ROSARIO matbord + 6st WEMBLEY matstol' price='17 995'  id='66a1beca98c3f1f9efdccc34'/>
+{/* <Product image='/ProductCarousel/4.png' name='DANGARDEN' description='ONE DEAL' price='13 495' /> */}
+{/* <Product image='/ProductCarousel/5.png' name='DANGARDEN' description='Specialpris UMAMI utekok modul 1 + 2' price='12 285' /> */}
+{/* <Product image='/ProductCarousel/6.png' name='NAPOLEON' description='Napoleon Rogue 425-1SE Phantom' price={'17 995'} /> */}
 
 </Carousel>
 

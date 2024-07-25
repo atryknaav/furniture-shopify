@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 interface ProductProps {
@@ -5,11 +6,15 @@ interface ProductProps {
     name: string
     description: string
     price: string
+    id: string
 }
 
 const Product = (props: ProductProps) => {
-    const { image, description, price, name} = props;
+    const { image, description, price, name, id} = props;
   return (
+    <Link
+    href={'/product?id=' + id}
+    >
     <div className=' flex flex-col gap-2 group hover:cursor-pointer ml-12'>
 
         <div>
@@ -28,6 +33,7 @@ const Product = (props: ProductProps) => {
             {`$${price}`}
         </div>
     </div>
+    </Link>
   )
 }
 
