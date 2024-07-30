@@ -5,6 +5,7 @@ import Carousel from 'react-multi-carousel';
 import WithStyles from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 import Product from './Product';
+import LeftArrow from './LeftArrow';
 // import item from '../../app/product/test';
 
 const CarouselElement = () => {
@@ -25,6 +26,7 @@ const CarouselElement = () => {
   minimumTouchDrag={80}
   pauseOnHover
   renderArrowsWhenDisabled={false}
+  customLeftArrow={<LeftArrow />}
   renderButtonGroupOutside={false}
   renderDotsOutside={false}
   responsive={{
