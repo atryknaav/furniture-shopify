@@ -86,7 +86,7 @@ const dispatch = useDispatch();
         className={(imgLoaded?` `:` hidden`) + ' w-full] '}/>}
       </div>
       <div className=" p-3 font-bold text-2xl text-zinc-700">
-        ${price}
+        {imgLoaded? '$' : ''}{price}
       </div>
     </div>
 
@@ -95,11 +95,10 @@ const dispatch = useDispatch();
         {desc}
       </div>
 
-      <div className=" mt-20 " onClick={() => {dispatch(add([name, id, price]))}}>
+      <div className=" mt-20 " onClick={() => {dispatch(add([name, id, price, source]))}}>
         <BuyButton />
-        {/* {shpCart.map((e) => e.name)} */}
       </div>
-        <div onClick={() => {dispatch(remove(id))}} className=" bg-slate-500 select-none mt-10">remove</div>
+        <div onClick={() => {dispatch(remove([id, price]))}} className=" bg-slate-500 select-none mt-10">remove</div>
 
     </div>
 

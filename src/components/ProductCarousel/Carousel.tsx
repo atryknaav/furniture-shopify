@@ -6,13 +6,16 @@ import WithStyles from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 import Product from './Product';
 import LeftArrow from './LeftArrow';
+import { useSelector } from 'react-redux';
+import { RootState } from '@/redux/store';
 // import item from '../../app/product/test';
 
 const CarouselElement = () => {
+  const cartOn = useSelector((state: RootState) => state.cartOn);
   return (
     <Carousel
   additionalTransfrom={0}
-  arrows
+  arrows = {!cartOn}
   autoPlaySpeed={3000}
   centerMode={false}
   className=""
@@ -26,7 +29,6 @@ const CarouselElement = () => {
   minimumTouchDrag={80}
   pauseOnHover
   renderArrowsWhenDisabled={false}
-  customLeftArrow={<LeftArrow />}
   renderButtonGroupOutside={false}
   renderDotsOutside={false}
   responsive={{
