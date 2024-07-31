@@ -85,9 +85,6 @@ const dispatch = useDispatch();
         {<Image src={source} alt="" width={700} height={500} placeholder = 'blur' blurDataURL="/ProductCarousel/1.png" priority
         className={(imgLoaded?` `:` hidden`) + ' w-full] '}/>}
       </div>
-      <div className=" p-3 font-bold text-2xl text-zinc-700">
-        {imgLoaded? '$' : ''}{price}
-      </div>
     </div>
 
     <div className=" flex flex-col items-center m-auto p-40 border-l-[1px] h-full text-xl w-max-[30%] w-fit">
@@ -95,10 +92,12 @@ const dispatch = useDispatch();
         {desc}
       </div>
 
+      <div className=" p-3 font-semibold text-2xl text-zinc-500 flex items-start w-full mt-10">
+        {imgLoaded? '$' : ''}{price}
+      </div>
       <div className=" mt-20 " onClick={() => {dispatch(add([name, id, price, source]))}}>
         <BuyButton />
       </div>
-        <div onClick={() => {dispatch(remove([id, price]))}} className=" bg-slate-500 select-none mt-10">remove</div>
 
     </div>
 

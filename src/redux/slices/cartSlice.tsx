@@ -39,9 +39,9 @@ export const cartSlice = createSlice({
 
       else{
         state.products.find(product => product.id === action.payload[1])!.qnt += 1;
-        state.products.find(product => product.id === action.payload[1])!.price = state.products.find(product => product.id === action.payload[1])!.qnt * action.payload[2];
+        
       }
-      state.total = state.products.reduce((acc, product) => acc + product.price, 0);
+      state.total = state.products.reduce((acc, product) => acc + product.price * product.qnt, 0);
     },
 
 
@@ -51,18 +51,32 @@ export const cartSlice = createSlice({
       const exProduct = state.products.find(product => product.id === action.payload[0]);
       if (exProduct){
         if(state.products[index].qnt === 1)state.products.splice(index, 1)
-        else{ state.products[index].qnt--;
-              state.products[index].price -= action.payload[1];
-        }
+          else{ state.products[index].qnt--;
       }
-      state.total = state.products.reduce((acc, product) => acc + product.price, 0);
-      }
+    }
+    state.total = state.products.reduce((acc, product) => acc + product.price * product.qnt, 0);
+  },
+  
+  
+  deleteItem: (state, action) => {
+    const index = state.products.findIndex(product => product.id === action.payload[0])
+    const exProduct = state.products.find(product => product.id === action.payload[0]);
+    if (exProduct){
+      state.products.splice(index, 1)}
+      state.total = state.products.reduce((acc, product) => acc + product.price * product.qnt, 0);
+    },
+  
+  
+  changeQnt: (state, action) => {
+      const index = state.products.findIndex(product => product.id === action.payload[0])
+      state.products[index].qnt = action.payload[0];
+    }
     
   }
   },
 )
 
 // Action creators are generated for each case reducer function
-export const { add, remove } = cartSlice.actions
+export const { add, remove, changeQnt, deleteItem } = cartSlice.actions
 
 export default cartSlice.reducer
