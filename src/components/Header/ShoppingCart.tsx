@@ -5,6 +5,7 @@ import { Cross1Icon } from '@radix-ui/react-icons';
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import CartProducts from '../CartProduct/CartProducts';
+import CheckOutButton from './CheckOutButton';
 
 
 const ShoppingCart = () => {
@@ -42,7 +43,7 @@ const ShoppingCart = () => {
         </div>
 
         <div>
-            
+            <CheckOutButton />
         </div>
         </div>
     </div>

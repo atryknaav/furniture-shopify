@@ -67,6 +67,7 @@ export default function Home() {
 const shpCart = useSelector((state: RootState) => state.shoppingCart.products);
 const dispatch = useDispatch();
 
+const hide = imgLoaded? 'block' : 'hidden';
 
 
 
@@ -95,7 +96,7 @@ const dispatch = useDispatch();
       <div className=" p-3 font-semibold text-2xl text-zinc-500 flex items-start w-full mt-10">
         {imgLoaded? '$' : ''}{price}
       </div>
-      <div className=" mt-20 " onClick={() => {dispatch(add([name, id, price, source]))}}>
+      <div className={" mt-20 " + hide} onClick={() => {dispatch(add([name, id, price, source]))}}>
         <BuyButton />
       </div>
 

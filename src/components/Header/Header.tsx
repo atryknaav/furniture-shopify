@@ -3,13 +3,15 @@
 import React from 'react'
 import Option from './Option'
 // import { HeartIcon } from '@radix-ui/react-icons'
-import { BiHeart, BiShoppingBag } from 'react-icons/bi'
+import { BiHeart } from 'react-icons/bi'
 import Link from 'next/link'
 import ShoppingCart from './ShoppingCart'
 import StoreProvider from '@/redux/StoreProvider'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '@/redux/store'
 import { toggle } from '@/redux/slices/showCartSlice'
+import { FaShoppingBag, FaShoppingCart } from 'react-icons/fa';
+import { FiShoppingBag } from 'react-icons/fi';
 
 const Header = () => {
     const cartOn = useSelector((state: RootState) => state.cartOn);
@@ -18,7 +20,7 @@ const Header = () => {
     <StoreProvider>
     <div className=' flex justify-between text-lg gap-30 py-4 px-14 fixed w-screen shadow-sm top-0 left-0 z-20 bg-white'>
         <div className=' flex justify-between w-[35%]'>
-            <Option name={'Products'} link='/products'/>
+            <Option name={'Products'} link='/'/>
             <Option name={'Outdoor Furniture'} link='/outdoor' />
             <Option name={'Our Material'} link='/material' />
             <Option name={'About Us'} link='/about' />
@@ -42,7 +44,7 @@ const Header = () => {
 
             <div className=' flex gap-6 items-center'>
                 <BiHeart className=' text-3xl'/>
-                <BiShoppingBag className=' text-3xl' onClick={() => {dispatch(toggle())}}/>
+                <FiShoppingBag className=' text-3xl hover:cursor-pointer' onClick={() => {dispatch(toggle())}}/>
             </div>
         </div>
         <ShoppingCart />

@@ -1,7 +1,7 @@
 import { add, changeQnt, deleteItem, remove } from '@/redux/slices/cartSlice';
 import { RootState } from '@/redux/store';
 import Image from 'next/image';
-import React from 'react'
+import React from 'react';
 import { FaChevronLeft, FaChevronRight, FaTrash } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -9,41 +9,49 @@ const CartProduct = () => {
   const shpCart = useSelector((state: RootState) => state.shoppingCart.products);
   const dispatch = useDispatch();
   return (
-    <div className=''>
-      {shpCart.map((product) =>
-      <div className=' flex justify-between w-full border-y-[1px] mb-2'>
-        <div className=' flex flex-col'>
-          <div>
-            <Image src={product.img} alt='' width={50} height={50} />
+    <div className='w-full flex flex-col'>
+      {shpCart.map((product) => (
+        <div key={product.id} className='flex justify-between gap-10 items-center w-full border-y-[1px] mb-2'>
+          <div className='flex flex-col w-[30%]'>
+            <div className='w-full'>
+              <Image src={product.img} alt={product.name} width={50} height={50} />
+            </div>
+            <div className='text-center'>
+              ${product.price}
+            </div>
           </div>
-
-          <div>
-            ${product.price} 
+          <div className='pl-4 flex justify-start'>
+            <div>
+            {product.name}
+            </div>
+          </div>
+          <div className='flex items-center gap-2'>
+            <div
+              className='px-2 mx-2 text-2xl text-zinc-300 hover:cursor-pointer hover:text-zinc-400'
+              onClick={() => dispatch(remove([product.id, product.price]))}
+            >
+              <FaChevronLeft />
+            </div>
+            <div className='w-[40px] text-center'>
+              {product.qnt.toString()}
+            </div>
+            <div
+              className='px-2 mx-2 text-2xl text-zinc-300 hover:cursor-pointer hover:text-zinc-400'
+              onClick={() => dispatch(add([product.name, product.id, product.price, product.img]))}
+            >
+              <FaChevronRight />
+            </div>
+            <div
+              className='text-red-500 flex hover:text-red-600 hover:cursor-pointer'
+              onClick={() => dispatch(deleteItem([product.id]))}
+            >
+              <FaTrash />
+            </div>
           </div>
         </div>
-
-
-        <div>
-          {product.name}
-        </div>
-
-
-        <div className=' flex items-center gap-2'>
-          <div className=' px-2 mx-2 text-2xl text-zinc-300 hover:cursor-pointer hover:text-zinc-400' onClick={() => dispatch(remove([product.id, product.price]))}>
-            <FaChevronLeft />
-          </div>
-          {product.qnt.toString()}
-          <div className=' px-2 mx-2 text-2xl text-zinc-300 hover:cursor-pointer hover:text-zinc-400' onClick={() => dispatch(add([product.name, product.id, product.price, product.img]))}>
-            <FaChevronRight />
-          </div>
-          <div className=' text-red-500 flex hover:text-red-600 hover:cursor-pointer' onClick={() => dispatch(deleteItem([product.id]))}>
-            <FaTrash />
-          </div>
-        </div>
-      </div>
-      )}
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default CartProduct
+export default CartProduct;
