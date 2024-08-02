@@ -10,10 +10,11 @@ import { RootState } from '@/redux/store';
 
 const CarouselElement = () => {
   const cartOn = useSelector((state: RootState) => state.cartOn);
+  const menuOn = useSelector((state: RootState) => state.menuOn);
   return (
     <Carousel
   additionalTransfrom={0}
-  arrows = {!cartOn}
+  arrows = {!cartOn && !menuOn}
   autoPlaySpeed={3000}
   centerMode={false}
   className=""
