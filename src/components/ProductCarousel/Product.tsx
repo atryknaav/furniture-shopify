@@ -18,18 +18,18 @@ const Product = (props: ProductProps) => {
     <div className=' flex flex-col gap-2 group hover:cursor-pointer ml-12'>
 
         <div>
-            <img src={image} alt=""  className=' sm:w-[450px] sm:h-[450px] h-[150px] w-[150px] group-hover:scale-95 transition-all duration-200'/>
+            <img src={image} alt=""  className=' tb:w-[450px] tb:h-[450px] h-[150px] w-[150px] group-hover:scale-95 transition-all duration-200'/>
         </div>
 
-        <div className=' font-semibold mx-3 text-md sm:text-xl hover:underline transition-all duration-400 w-fit h-fit'>
+        <div className=' font-semibold mx-3 text-md tb:text-xl hover:underline transition-all duration-400 w-fit h-fit'>
             {name}
         </div>
 
-        <div className=' px-3 text-sm sm:text-xl font-normal text-[#1c1c1c]'>
+        <div className=' px-3 text-tb tb:text-xl font-normal text-[#1c1c1c]'>
             {description}
         </div>
 
-        <div className=' px-3 text-sm sm:text-xl font-bold text-[#913737]'>
+        <div className=' px-3 text-tb tb:text-xl font-bold text-[#913737]'>
             {`$${price}`}
         </div>
     </div>

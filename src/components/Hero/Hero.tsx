@@ -30,7 +30,7 @@ const Hero = () => {
         </div>
 
         <div className='flex h-fit max-h-[1000px] tb:flex-row flex-col-reverse'>
-            <div className='w-auto bg-slate-700 max-h-[800px] tb:max-h-[1000px] flex  '>
+            <div className='w-auto bg-[#E0E0E0] max-h-[800px] tb:max-h-[1000px] flex  '>
               <Image src='/hero2.png' alt='' loading='eager' height={1000} width={1000} objectFit='cover'/>
             </div>
 

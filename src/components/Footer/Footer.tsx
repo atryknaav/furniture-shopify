@@ -14,19 +14,19 @@ const Footer = () => {
         <div className='h-fit p-12 flex gap-[2rem] tb:gap-[12rem] justify-between'>
 
             <div className=' flex flex-col gap-4'>
-                <div className=' text-xl font-semibold mb-2'>
+                <div className=' text-sm tb:text-xl font-semibold mb-2'>
                     Information
                 </div>
-                <div className=' text-xl font-normal'>
+                <div className=' text-sm tb:text-xl font-normal'>
                     About Us
                 </div>
-                <div className=' text-xl font-normal'>
+                <div className=' text-sm tb:text-xl font-normal'>
                     Contact
                 </div>
-                <div className=' text-xl font-normal'>
+                <div className=' text-sm tb:text-xl font-normal'>
                     Our Material
                 </div>
-                <div className=' text-xl font-normal'>
+                <div className=' text-sm tb:text-xl font-normal'>
                     Inspiration
                 </div>
             </div>
@@ -36,19 +36,19 @@ const Footer = () => {
 
 
             <div className=' flex flex-col gap-4'>
-                <div className=' text-xl font-semibold mb-2'>
+                <div className=' text-sm tb:text-xl font-semibold mb-2'>
                     Conditions
                 </div>
-                <div className=' text-xl font-normal'>
+                <div className=' text-sm tb:text-xl font-normal'>
                     Terms of Purchase
                 </div>
-                <div className=' text-xl font-normal'>
+                <div className=' text-sm tb:text-xl font-normal'>
                     Shipping Information
                 </div>
-                <div className=' text-xl font-normal'>
+                <div className=' text-sm tb:text-xl font-normal'>
                 Return information
                 </div>
-                <div className=' text-xl font-normal'>
+                <div className=' text-sm tb:text-xl font-normal'>
                 Privacy policy
                 </div>
             </div>
@@ -57,11 +57,11 @@ const Footer = () => {
 
 
 
-            <div className=' flex flex-col gap-4'>
-                <div className=' text-xl font-semibold mb-2'>
+            <div className=' sm:flex flex-col gap-4 hidden'>
+                <div className=' text-sm tb:text-xl font-semibold mb-2'>
                     Address
                 </div>
-                <div className=' text-xl font-normal'>
+                <div className='  text-sm tb:text-xl font-normal'>
                     Marrej
                 </div>
                 
@@ -71,10 +71,10 @@ const Footer = () => {
 
 
             <div className=' flex flex-col gap-4'>
-                <div className=' text-xl font-semibold mb-2'>
+                <div className=' text-sm tb:text-xl font-semibold mb-2'>
                     Follow Us
                 </div>
-                <div className=' text-3xl font-normal flex gap-3'>
+                <div className='  text-2xl flex-col sm:flex-row tb:text-3xl font-normal flex gap-3'>
                     <FaFacebook />
                     <FaInstagram />
                     <FaTwitter />
@@ -84,7 +84,7 @@ const Footer = () => {
             </div>
 
 
-            <div className=' border-[2px] rounded-full border-white p-6 h-fit text-6xl hover:scale-110 transition-all duration-200 hover:cursor-pointer flex content-end' onClick={
+            <div className=' border-[2px] rounded-full border-white p-6 h-fit  text-xl tb:text-6xl hover:scale-110 transition-all duration-200 hover:cursor-pointer flex content-end' onClick={
                 () => {
                     window.scroll(0, 0)
                 }
@@ -96,7 +96,7 @@ const Footer = () => {
 
         <div className=' h-fit border-t-[1px] border-white flex justify-between px-12 py-6'>
             
-            <div className=' text-3xl'>
+            <div className='  text-smttb:ext-3xl'>
                 <div className=' border-[1px] rounded-full border-white p-3 hover:bg-white hover:text-black transition duration-500 '>
 
                 <MdLanguage />
@@ -104,7 +104,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className=' text-4xl flex items-center'>
+            <div className='  text-2xl tb:text-4xl flex items-center'>
                 MARREJ
             </div>
 
@@ -113,7 +113,7 @@ const Footer = () => {
 
 
 
-        <div className=' bg-white text-red-700 flex justify-end pr-10 text-sm font-semibold'>
+        <div className=' bg-white text-red-700 flex justify-end pr-10 sm:text-sm text-xs font-semibold'>
         {year} @ THIS SITE IS CREATED USING THE CONTENT OF THE OFFICIAL DANGARDEN WEBSITE AND DESIGN <a href="https://dangarden.se/" className=' ml-12 text-green-600'>WEBSITE</a> <a href="https://www.behance.net/gallery/198258093/Shopify-Website-UXUI-Design-Development-Dangarden" className=' ml-12 text-green-600'>DESIGN</a>
         </div>
 
