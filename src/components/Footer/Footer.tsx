@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div className=' flex flex-col bg-[#1c1c1c] text-white'>
 
-        <div className='h-fit p-12 flex gap-[12rem] justify-between'>
+        <div className='h-fit p-12 flex gap-[2rem] tb:gap-[12rem] justify-between'>
 
             <div className=' flex flex-col gap-4'>
                 <div className=' text-xl font-semibold mb-2'>
@@ -62,7 +62,7 @@ const Footer = () => {
                     Address
                 </div>
                 <div className=' text-xl font-normal'>
-                    Dangarden
+                    Marrej
                 </div>
                 
             </div>
@@ -105,7 +105,7 @@ const Footer = () => {
             </div>
 
             <div className=' text-4xl flex items-center'>
-                DANGARDEN
+                MARREJ
             </div>
 
         </div>

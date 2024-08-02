@@ -5,10 +5,8 @@ import Carousel from 'react-multi-carousel';
 import WithStyles from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 import Product from './Product';
-import LeftArrow from './LeftArrow';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
-// import item from '../../app/product/test';
 
 const CarouselElement = () => {
   const cartOn = useSelector((state: RootState) => state.cartOn);
@@ -37,7 +35,7 @@ const CarouselElement = () => {
         max: 3000,
         min: 1024
       },
-      items: 3,
+      items: 4,
       partialVisibilityGutter: 40
     },
     mobile: {
@@ -45,15 +43,15 @@ const CarouselElement = () => {
         max: 464,
         min: 0
       },
-      items: 1,
-      partialVisibilityGutter: 30
+      items: 2,
+      partialVisibilityGutter: 0
     },
     tablet: {
       breakpoint: {
         max: 1024,
         min: 464
       },
-      items: 2,
+      items: 3,
       partialVisibilityGutter: 30
     }
   }}
@@ -66,11 +64,11 @@ const CarouselElement = () => {
   slidesToSlide={1}
   swipeable
 >
-<Product image='/ProductCarousel/1.png' name='DANGARDEN' description='UMAMI+KAMADO BONO LIMITED,svart' price='955' id='66a711f7433cdf5e57abb9de'/>
-<Product image='/ProductCarousel/2.png' name='VENTURE HOME' description='DAVAO soffgrupp med soffbord' price='569' id='66a713c0433cdf5e57abb9e8' />
-<Product image='/ProductCarousel/3.png' name='VENTURE HOME' description='ROSARIO matbord + 6st WEMBLEY matstol' price='340'  id='66a71333433cdf5e57abb9e5'/>
-<Product image='/ProductCarousel/4.png' name='DANGARDEN' description='ONE DEAL' price='749' id='66a7142c433cdf5e57abb9eb'/>
-<Product image='/ProductCarousel/5.png' name='DANGARDEN' description='Specialpris UMAMI utekok modul 1 + 2' price='199' id='66a714e2433cdf5e57abb9f0'/>
+<Product image='/ProductCarousel/1.png' name='MARREJ' description='UMAMI+KAMADO BONO LIMITED,black' price='955' id='66a711f7433cdf5e57abb9de'/>
+<Product image='/ProductCarousel/2.png' name='VENTURE HOME' description='DAVAO sofa group with table' price='569' id='66a713c0433cdf5e57abb9e8' />
+<Product image='/ProductCarousel/3.png' name='VENTURE HOME' description='ROSARIO dining table + 6th WEMBLEY chairs' price='340'  id='66a71333433cdf5e57abb9e5'/>
+<Product image='/ProductCarousel/4.png' name='MARREJ' description='ONE DEAL' price='749' id='66a7142c433cdf5e57abb9eb'/>
+<Product image='/ProductCarousel/5.png' name='MARREJ' description='Special price UMAMI outdoor kitchen parts 1 + 2' price='199' id='66a714e2433cdf5e57abb9f0'/>
 <Product image='/ProductCarousel/6.png' name='NAPOLEON' description='Napoleon Rogue 425-1SE Phantom' price='569' id='66a7155d433cdf5e57abb9f3'/>
 
 </Carousel>

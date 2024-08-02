@@ -11,7 +11,7 @@ const oswald = Oswald({ subsets: ["latin"] })
 
 export default function Home() {
   return (
-    <div className=" ">
+    <div className=" flex flex-col relative">
       <Header />
       <Hero />
       <ProductCarousel />

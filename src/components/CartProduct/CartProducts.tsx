@@ -11,16 +11,16 @@ const CartProduct = () => {
   return (
     <div className='w-full flex flex-col'>
       {shpCart.map((product) => (
-        <div key={product.id} className='flex justify-between gap-10 items-center w-full border-y-[1px] mb-2'>
-          <div className='flex flex-col w-[30%]'>
+        <div key={product.id} className='flex justify-between  items-center w-full border-y-[1px] mb-2'>
+          <div className='flex flex-col w-fit mr-6'>
             <div className='w-full'>
               <Image src={product.img} alt={product.name} width={50} height={50} />
             </div>
-            <div className='text-center'>
+            <div className=''>
               ${product.price}
             </div>
           </div>
-          <div className='pl-4 flex justify-start'>
+          <div className='pl-4 flex m-auto text-left ml-0 w-max-fit '>
             <div>
             {product.name}
             </div>

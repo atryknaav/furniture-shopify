@@ -18,21 +18,21 @@ const Header = () => {
     const dispatch = useDispatch();
   return (
     <StoreProvider>
-    <div className=' flex justify-between text-lg gap-30 py-4 px-14 fixed w-screen shadow-sm top-0 left-0 z-20 bg-white'>
-        <div className=' flex justify-between w-[35%]'>
+    <div className=' tb:flex justify-between text-lg gap-30 py-4 px-14 fixed  w-screen shadow-tb top-0 left-0 z-20 bg-white'>
+        <div className=' tb:flex justify-between w-[35%] hidden'>
             <Option name={'Products'} link='/'/>
             <Option name={'Outdoor Furniture'} link='/outdoor' />
             <Option name={'Our Material'} link='/material' />
             <Option name={'About Us'} link='/about' />
         </div>
 
-        <div className=' flex justify-center w-[30%] text-3xl '>
+        <div className=' flex justify-center tb:w-[30%] w-full text-3xl '>
             <Link href={'/'}>
-            DANGARDEN
+            MARREJ
             </Link>
         </div>
 
-        <div className=' flex justify-between gap-8 w-[35%]'>
+        <div className=' tb:flex justify-between gap-8 w-[35%] hidden'>
 
             <input type="text" placeholder='What are you looking for?' className=' outline-none w-full border-b-2 border-black px-3'/>
 

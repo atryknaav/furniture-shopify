@@ -1,16 +1,20 @@
 import React from 'react'
 import { GoArrowDownRight } from 'react-icons/go'
 import GetItButton from './GetItButton'
+import Image from 'next/image'
 
 const Hero = () => {
   return (
-    <div className=' z-0'>
+    <div className=' flex flex-col gap-40 tb:gap-0 z-0'>
         <div className=' relative w-full h-fit '>
-          <img src="/hero1.png" alt=""/>
+          
+          <div className=' h-[1000px] w-auto tb:relative'>
+            <Image src='/hero1.png' alt='' loading='eager' fill objectFit='cover'/>
+          </div>
 
-          <div className=' absolute bottom-0 left-0 pb-[10vw] pl-[5vw] text-white text-6xl font-semibold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] '>
-            <div className='  text-lg font-medium'>
-              DANGARDEN
+          <div className=' absolute bottom-0 mb-60 tb:mb-0 left-0 pb-[10vw] pl-[5vw] pr-[10vw] text-white text-6xl font-semibold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] '>
+            <div className=' text-lg tb:text-lg font-medium'>
+              MARREJ
             </div>
 
             <div className=' text-4xl mt-8'>
@@ -25,53 +29,53 @@ const Hero = () => {
 
         </div>
 
-        <div className=' flex h-fit'>
-            <div className=' w-[50%] bg-slate-700'>
-              <img src="/hero2.png" alt="" className=' h-[1000px] w-full'/>
+        <div className='flex h-fit max-h-[1000px] tb:flex-row flex-col-reverse'>
+            <div className='w-auto bg-slate-700 max-h-[800px] tb:max-h-[1000px] flex  '>
+              <Image src='/hero2.png' alt='' loading='eager' height={1000} width={1000} objectFit='cover'/>
             </div>
 
-            <div className='  flex gap-2 flex-col justify-center p-[7rem] w-[50%] bg-[#E0E0E0] font-light h-[1000px]'>
+            <div className=' relative tb:static flex gap-2 flex-col justify-center p-2 tb:p-[7rem] tb:w-[50%] w-[100%] bg-[#E0E0E0] font-light tb:h-[1000px] '> 
               <div>
-                DANGARDEN 
+                MARREJ 
               </div>
 
-              <div className=' text-5xl font-semibold'>
-              EGEN DESIGN OCH TILLVERKNING
+              <div className=' text-xl tb:text-5xl font-semibold'>
+              OWN DESIGN AND MANUFACTURE
               </div>
 
-              <div className=' text-xl my-2'>
-              <span className=' font-semibold'>Direkt från egen</span> fabrik levererar vi produkter till vårt varumärke i prisvärd premium.
+              <div className=' text-tb tb:text-xl my-2'>
+              <span className=' font-semibold'>Directly from our own factory,</span> we deliver products to our brand at an affordable premium.
               </div>
 
-              <div className=' text-xl my-2'>
-              <span className=' font-semibold'>Vi har producerat</span> hela vintern och lagret är nu välfyllt med våra produkter.
+              <div className=' text-tb tb:text-xl my-2'>
+              <span className=' font-semibold'>We have been producing</span> all winter and the warehouse is now well stocked with our products..
               </div>
 
-              <div className=' text-xl my-2'>
-              <span className=' font-semibold'>Ifjol tog alla</span>  våra utekök slut redan i Maj för direktleverans så vänta inte för länge med att lägga order på ditt drömkök för sommarens riktigt lata dagar.
+              <div className=' text-tb tb:text-xl my-2'>
+              <span className=' font-semibold'>Last year, all our outdoor kitchens</span>  ran out already in May for direct delivery, so don't wait too long to place an order for your dream kitchen for the really lazy days of summer.
               </div>
 
-              <div className=' text-xl my-2'>
-              <span className=' font-semibold'>Här i vår shop</span> finner ni också andra kompleterande varumärken med sånt vi gillar och som kompletterar våra egna produkter.
+              <div className=' text-tb tb:text-xl my-2'>
+              <span className=' font-semibold'>Here in our shop</span> you will also find other complementary brands with things we like and which complement our own products.
               </div>
 
-              <div className=' text-xl my-2'>
-              <span className=' font-semibold'>Extra glada är</span>  vi att just du har tittat in här till oss och har du några frågor tveka då inte att skriva till oss direkt i chatten!
+              <div className=' text-tb tb:text-xl my-2'>
+              <span className=' font-semibold'>We are extra happy</span>  that you have visited us here and if you have any questions, don't hesitate to write to us directly in the chat!
               </div>
 
-              <ul className=' flex flex-col gap-5 list-disc ml-10 text-xl'>
+              <ul className=' flex flex-col gap-5 list-disc ml-10 text-tb tb:text-xl'>
                 <li>
-                Certifierad E-handel med köpskydd
+                Certified E-commerce with purchase protection
                 </li>
                 <li>
-                Köp nu. Betala senare med KLARNA
+                Buy now. Pay later with KLARNA
                 </li>
                 <li>
-                Lagervaror leverans 2-5 arbetsdagar
+                Stock items delivery 2-5 working days
                 </li>
               </ul>
 
-              <GetItButton isBlack={false}/>
+              <GetItButton isBlack={false} />
 
             </div>
         </div>
