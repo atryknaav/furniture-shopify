@@ -21,9 +21,35 @@ const config: Config = {
           '0%': { transform: 'translateY(-100%)', opacity: '0' },
           '100%': { transform: 'translateY(0%)', opacity: '1' },
         },
+        rise: {
+          '0%': { transform: 'translateY(0%)', opacity: '1' },
+          '100%': { transform: 'translateY(-100%)', opacity: '0' },
+        },
+        sideDrop: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+        sideRise: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+        appear: {
+          '0%': {opacity: '0'},
+          '100%': {opacity: '1'}
+        },
+        disappear: {
+          '0%': {opacity: '1', transform:'translateZ(0%)'},
+          '100%': {opacity: '0', transform:'translateZ(100%)', pointerEvents: 'none'}
+        },
       },
       animation: {
-        drop: 'drop 0.5s ease-out forwards',
+        drop: 'drop 1s ease-out forwards',
+        rise: 'rise 1s ease-out forwards',
+        sidedrop: 'sideDrop 0.5s ease-out forwards',
+        siderise: 'sideRise 0.5s ease-out forwards',
+        appear: 'appear 0.5s ease-out forwards',
+        disappear: 'disappear 0.5s ease-out forwards',
+        
       },
     },
   },

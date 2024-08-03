@@ -13,6 +13,7 @@ import { toggle } from '@/redux/slices/showCartSlice'
 import { FiShoppingBag } from 'react-icons/fi';
 import { VscThreeBars } from 'react-icons/vsc';
 import { toggleMenu } from '@/redux/slices/menuShowSlice';
+import Menu from './Menu';
 
 const Header = () => {
     const menuOn = useSelector((state: RootState) => state.menuOn);
@@ -21,7 +22,7 @@ const Header = () => {
     const hide = menuOn? ' flex' : ' hidden';
   return (
     <StoreProvider>
-    <div className=' flex-col flex'>
+    <div className=' flex-col flex select-none'>
         <div className=' flex justify-between text-lg gap-30 py-4 px-14 fixed  w-screen shadow-md top-0 left-0 z-20 bg-white'>
             <div className=' tb:flex justify-between w-[35%] hidden'>
                 <Option name={'Products'} link='/'/>
@@ -52,7 +53,7 @@ const Header = () => {
                 </div>
             </div>
 
-            <div className=' tb:hidden flex justify-end text-3xl items-center -mr-10'>
+            <div className=' peer tb:hidden flex justify-end text-3xl items-center -mr-10'>
                 <VscThreeBars  onClick={() => dispatch(toggleMenu())}/>
 
             </div>
@@ -60,10 +61,7 @@ const Header = () => {
             <ShoppingCart />
 
         </div>
-            <div className={` tb:hidden flex w-full fixed h-screen bg-[#f8f8f8] z-10  left-0 animate-drop` + hide}>
-
-                
-            </div>
+            <Menu />
     </div>
     </StoreProvider>
   )

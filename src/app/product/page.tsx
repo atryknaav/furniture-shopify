@@ -10,6 +10,7 @@ import { Provider, useDispatch, useSelector } from "react-redux";
 
 import {add, remove} from '@/redux/slices/cartSlice'
 import { RootState } from "@/redux/store";
+import Footer from "@/components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const oswald = Oswald({ subsets: ["latin"] });
@@ -73,22 +74,22 @@ const hide = imgLoaded? 'block' : 'hidden';
 
   return (
   
-      <div>
+      <div className=" flex flex-col">
   <Header />
 
-  <div className=" mt-20 flex p-3">
+  <div className=" mt-20 flex-col tb:flex-row flex tb:p-3">
 
     <div className=" flex flex-col w-full text-2xl">
-      <div>
+      <div className=" m-auto">
         {name}
       </div>
-      <div className=" w-full my-6 border-y-[1px]">
+      <div className=" w-full my-6 border-y-[1px] ">
         {<Image src={source} alt="" width={700} height={500} placeholder = 'blur' blurDataURL="/ProductCarousel/1.png" priority
-        className={(imgLoaded?` `:` hidden`) + ' w-full] '}/>}
+        className={(imgLoaded?` `:` hidden`) + ' tb:w-[80%] w-20% m-auto p-6 tb:p-0'}/>}
       </div>
     </div>
 
-    <div className=" flex flex-col items-center m-auto p-40 border-l-[1px] h-full text-xl w-max-[30%] w-fit">
+    <div className=" flex flex-col items-center m-auto text-lg  p-3 tb:p-40 tb:border-l-[1px] h-full tb:text-xl w-[90%] tb:w-max-[30%] tb:w-fit">
       <div>
         {desc}
       </div>
@@ -102,7 +103,9 @@ const hide = imgLoaded? 'block' : 'hidden';
 
     </div>
 
+
   </div>
+    <Footer />
 </div>
   );
 }
