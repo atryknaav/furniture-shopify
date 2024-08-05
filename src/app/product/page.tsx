@@ -11,6 +11,8 @@ import { Provider, useDispatch, useSelector } from "react-redux";
 import {add, remove} from '@/redux/slices/cartSlice'
 import { RootState } from "@/redux/store";
 import Footer from "@/components/Footer/Footer";
+import { toggle } from "@/redux/slices/showCartSlice";
+import { VscLoading } from "react-icons/vsc";
 
 const inter = Inter({ subsets: ["latin"] });
 const oswald = Oswald({ subsets: ["latin"] });
@@ -68,7 +70,15 @@ export default function Home() {
 const shpCart = useSelector((state: RootState) => state.shoppingCart.products);
 const dispatch = useDispatch();
 
-const hide = imgLoaded? 'block' : 'hidden';
+const [hide, setHide] = useState(' hidden');
+const [hideLoading, setHideLoading] = useState(' ');
+
+useEffect(() => {
+  if (imgLoaded){
+    setHide(' ');
+    setHideLoading(' hidden');
+  }
+}, [imgLoaded])
 
 
 
@@ -77,7 +87,7 @@ const hide = imgLoaded? 'block' : 'hidden';
       <div className=" flex flex-col">
   <Header />
 
-  <div className=" mt-20 flex-col tb:flex-row flex tb:p-3">
+  <div className={" mt-20 flex-col tb:flex-row flex tb:p-3" + hide}>
 
     <div className=" flex flex-col w-full text-2xl">
       <div className=" m-auto">
@@ -97,7 +107,7 @@ const hide = imgLoaded? 'block' : 'hidden';
       <div className=" p-3 font-semibold text-2xl text-zinc-500 flex items-start w-full mt-10">
         {imgLoaded? '$' : ''}{price}
       </div>
-      <div className={" mt-20 " + hide} onClick={() => {dispatch(add([name, id, price, source]))}}>
+      <div className={" mt-20 " + hide} onClick={() => {dispatch(add([name, id, price, source])); dispatch(toggle())}}>
         <BuyButton />
       </div>
 
@@ -105,6 +115,9 @@ const hide = imgLoaded? 'block' : 'hidden';
 
 
   </div>
+    <div className={" w-screen h-screen flex items-center" + hideLoading}>
+      <VscLoading  className={" text-6xl animate-spin text-gray-400 m-auto"}/>
+    </div>
     <Footer />
 </div>
   );

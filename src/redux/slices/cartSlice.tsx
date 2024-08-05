@@ -50,9 +50,7 @@ export const cartSlice = createSlice({
       const index = state.products.findIndex(product => product.id === action.payload[0])
       const exProduct = state.products.find(product => product.id === action.payload[0]);
       if (exProduct){
-        if(state.products[index].qnt === 1)state.products.splice(index, 1)
-          else{ state.products[index].qnt--;
-      }
+        if(!(state.products[index].qnt === 1))state.products[index].qnt--;
     }
     state.total = state.products.reduce((acc, product) => acc + product.price * product.qnt, 0);
   },

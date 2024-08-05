@@ -14,6 +14,7 @@ import { FiShoppingBag } from 'react-icons/fi';
 import { VscThreeBars } from 'react-icons/vsc';
 import { toggleMenu } from '@/redux/slices/menuShowSlice';
 import Menu from './Menu';
+import SearchBar from './SearchBar';
 
 const Header = () => {
     const menuOn = useSelector((state: RootState) => state.menuOn);
@@ -39,7 +40,7 @@ const Header = () => {
 
             <div className=' tb:flex justify-between gap-8 w-[35%] hidden'>
 
-                <input type="text" placeholder='What are you looking for?' className=' outline-none w-full border-b-2 border-black px-3'/>
+                <SearchBar />
 
                 <select name="currency" id="currency-select" className=' font-bold'>
                     <option value="usd">USD$</option>

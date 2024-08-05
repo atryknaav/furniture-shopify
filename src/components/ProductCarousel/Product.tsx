@@ -15,7 +15,7 @@ const Product = (props: ProductProps) => {
     <Link
     href={'/product?id=' + id}
     >
-    <div className=' flex flex-col gap-2 group hover:cursor-pointer ml-12'>
+    <div className=' flex flex-col gap-2 group hover:cursor-pointer ml-12 h-full'>
 
         <div>
             <img src={image} alt=""  className=' tb:w-[450px] tb:h-[450px] h-[150px] w-[150px] group-hover:scale-95 transition-all duration-200'/>
@@ -25,11 +25,11 @@ const Product = (props: ProductProps) => {
             {name}
         </div>
 
-        <div className=' px-3 text-tb tb:text-xl font-normal text-[#1c1c1c]'>
+        <div className=' px-3 text-sm tb:text-xl font-normal text-[#1c1c1c]'>
             {description}
         </div>
 
-        <div className=' px-3 text-tb tb:text-xl font-bold text-[#913737]'>
+        <div className=' px-3 text-sm tb:text-xl font-bold text-[#913737] absolute bottom-0'>
             {`$${price}`}
         </div>
     </div>
