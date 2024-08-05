@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
 
   const name = req.nextUrl.searchParams.get("name"); 
   const description = req.nextUrl.searchParams.get("description"); // Get 'description' from request URL search parameters
-  const price = req.nextUrl.searchParams.get("price"); // Get 'price' from request URL search parameters
+  const price = parseInt(req.nextUrl.searchParams.get("price")!); // Get 'price' from request URL search parameters
   const image = req.nextUrl.searchParams.get("image"); // Get 'price' from request URL search parameters
 
 

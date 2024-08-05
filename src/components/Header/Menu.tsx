@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import Option from './Option';
 import { toggleMenu } from '@/redux/slices/menuShowSlice';
+import SearchBar from './SearchBar';
 
 
 const Menu = () => {
@@ -29,6 +30,7 @@ const Menu = () => {
                 <Option name={'Our Material'} link='/material' />
                 <Option name={'About Us'} link='/about' />
         </div>
+                <SearchBar />
 
                
     </div>

@@ -20,7 +20,7 @@ const CartProduct = () => {
               ${product.price}
             </div>
           </div>
-          <div className='pl-4 flex m-auto text-left ml-0 w-max-fit '>
+          <div className='pl-4 flex m-auto text-left ml-0 w-max-fit tb:text-base text-sm'>
             <div>
             {product.name}
             </div>

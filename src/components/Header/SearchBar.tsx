@@ -1,5 +1,8 @@
+import { toggleMenu } from '@/redux/slices/menuShowSlice';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
 
 interface productType {
     _id: string,
@@ -13,6 +16,9 @@ const SearchBar = () => {
     const [productList, setProductList] = useState<productType[]>([]);
     const [productName, setProductName] = useState('');
     const [inputValue, setInputValue] = useState('');
+    
+    const dispatch = useDispatch();
+
 
     const searchProducts = async (name: string) => {
         try{
@@ -40,8 +46,8 @@ const SearchBar = () => {
         }
     }
   return (
-    <div className=' group w-full px-3 items-center flex flex-col'>
-        <input type="text" placeholder='What are you looking for?' value={inputValue} className=' outline-none w-full border-b-2 border-black px-3' onChange={(e) => {
+    <div className=' group tb:w-full px-3 items-center flex flex-col tb:static absolute top-[20rem] w-[80%] right-0 left-0 mr-auto ml-auto'>
+        <input type="text" placeholder='What are you looking for?' value={inputValue} className=' outline-none w-full border-b-2 border-black px-3 text-center tb:text-left' onChange={(e) => {
             setInputValue(e.target.value);
             searchProducts(e.target.value);
             console.log('requested')
@@ -49,12 +55,19 @@ const SearchBar = () => {
         
     
         }}/>
-        <div className=' absolute bg-white group-focus-within:flex hidden flex-col top-12 gap-3 max-w-[50%]'>
+        <div className=' absolute bg-white shadow-xl group-focus-within:flex hidden flex-col top-8 tb:top-12 max-w-[80%] max-h-[15rem] tb:max-w-[50%] overflow-y-scroll'>
             {(inputValue.length !== 0)?
             productList.map((product) => (
                 <Link href={'/product?id=' + product._id}>
-                <div className=' hover:cursor-pointer hover:bg-zinc-300'>
-                    {product.name}
+                <div className=' hover:cursor-pointer hover:bg-zinc-200 p-3 flex shadow-sm h-22 tb:h-20 gap-2 text-sm' onClick={() => {setInputValue(''); dispatch(toggleMenu())}}>
+                    <div className=' flex flex-col'>
+                        <Image src={'/'+product.image} alt='' width={50} height={50} />
+                    </div>
+
+                    <div>
+                        {product.name}
+
+                    </div>
                 </div>
                 </Link>
             ))

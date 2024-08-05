@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
  
 
   try {
-    const products = await Product.find({name: { $regex: name, $options: 'i'}}).exec(); // Fetch product by piece of name
+    const products = await Product.find({name: { $regex: name, $options: 'i'}}).limit(5).exec(); // Fetch product by piece of name
 
     if (!products) {
       return NextResponse.json({ error: 'Product not found' }, { status: 404 }); 

@@ -65,12 +65,12 @@ const CarouselElement = () => {
   slidesToSlide={1}
   swipeable
 >
-<Product image='/ProductCarousel/1.png' name='MARREJ' description='UMAMI+KAMADO BONO LIMITED,black' price='955' id='66a711f7433cdf5e57abb9de'/>
-<Product image='/ProductCarousel/2.png' name='VENTURE HOME' description='DAVAO sofa group with table' price='569' id='66a713c0433cdf5e57abb9e8' />
-<Product image='/ProductCarousel/3.png' name='VENTURE HOME' description='ROSARIO dining table + 6th WEMBLEY chairs' price='340'  id='66a71333433cdf5e57abb9e5'/>
-<Product image='/ProductCarousel/4.png' name='MARREJ' description='ONE DEAL' price='749' id='66a7142c433cdf5e57abb9eb'/>
-<Product image='/ProductCarousel/5.png' name='MARREJ' description='Special price UMAMI outdoor kitchen parts 1 + 2' price='199' id='66a714e2433cdf5e57abb9f0'/>
-<Product image='/ProductCarousel/6.png' name='NAPOLEON' description='Napoleon Rogue 425-1SE Phantom' price='569' id='66a7155d433cdf5e57abb9f3'/>
+<Product image='/Products/1.png' name='MARREJ' description='UMAMI+KAMADO BONO LIMITED,black' price='955' id='66a711f7433cdf5e57abb9de'/>
+<Product image='/Products/2.png' name='VENTURE HOME' description='DAVAO sofa group with table' price='569' id='66a713c0433cdf5e57abb9e8' />
+<Product image='/Products/3.png' name='VENTURE HOME' description='ROSARIO dining table + 6th WEMBLEY chairs' price='340'  id='66a71333433cdf5e57abb9e5'/>
+<Product image='/Products/4.png' name='MARREJ' description='ONE DEAL' price='749' id='66a7142c433cdf5e57abb9eb'/>
+<Product image='/Products/5.png' name='MARREJ' description='Special price UMAMI outdoor kitchen parts 1 + 2' price='199' id='66a714e2433cdf5e57abb9f0'/>
+<Product image='/Products/6.png' name='NAPOLEON' description='Napoleon Rogue 425-1SE Phantom' price='569' id='66a7155d433cdf5e57abb9f3'/>
 
 </Carousel>
 
