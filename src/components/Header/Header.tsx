@@ -26,7 +26,7 @@ const Header = () => {
     <div className=' flex-col flex select-none'>
         <div className=' flex justify-between text-lg gap-30 py-4 px-14 fixed  w-screen shadow-md top-0 left-0 z-20 bg-white'>
             <div className=' tb:flex justify-between w-[35%] hidden'>
-                <Option name={'Products'} link='/'/>
+                <Option name={'Products'} link='/all-products'/>
                 <Option name={'Outdoor Furniture'} link='/outdoor' />
                 <Option name={'Our Material'} link='/material' />
                 <Option name={'About Us'} link='/about' />

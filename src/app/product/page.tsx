@@ -90,12 +90,12 @@ useEffect(() => {
   <div className={" mt-20 flex-col tb:flex-row flex tb:p-3" + hide}>
 
     <div className=" flex flex-col w-full text-2xl">
-      <div className=" m-auto">
+      <div className=" mx-auto">
         {name}
       </div>
       <div className=" w-full my-6 border-y-[1px] ">
         {<Image src={source} alt="" width={700} height={500} placeholder = 'blur' blurDataURL="/ProductCarousel/1.png" priority
-        className={(imgLoaded?` `:` hidden`) + ' tb:w-[80%] w-20% m-auto p-6 tb:p-0'}/>}
+        className={(imgLoaded?` `:` hidden`) + ' tb:w-[90%] w-20% m-auto p-6 tb:p-0'}/>}
       </div>
     </div>
 
