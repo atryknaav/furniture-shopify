@@ -2,9 +2,10 @@ import { configureStore } from '@reduxjs/toolkit'
 import cartReducer from "./slices/cartSlice";
 import cartOnReducer from "./slices/showCartSlice";
 import menuOnReducer from './slices/menuShowSlice';
+import sortByReducer from './slices/sortBySlice';
 
 export const store = configureStore({
-  reducer: {shoppingCart: cartReducer, cartOn: cartOnReducer, menuOn: menuOnReducer},
+  reducer: {shoppingCart: cartReducer, cartOn: cartOnReducer, menuOn: menuOnReducer, sortBy: sortByReducer},
           
 })
 

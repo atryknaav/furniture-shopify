@@ -66,7 +66,7 @@ const CarouselElement = () => {
   swipeable
 >
 <Product image='/Products/1.png' name='MARREJ' description='UMAMI+KAMADO BONO LIMITED,black' price='955' id='66a711f7433cdf5e57abb9de'/>
-<Product image='/Products/2.png' name='VENTURE HOME' description='DAVAO sofa group with table' price='569' id='66a713c0433cdf5e57abb9e8' />
+<Product image='/Products/11.png' name='VENTURE HOME' description='DAVAO sofa group with table' price='569' id='66b13d8ba4d68e89a3f03c5c' />
 <Product image='/Products/3.png' name='VENTURE HOME' description='ROSARIO dining table + 6th WEMBLEY chairs' price='340'  id='66a71333433cdf5e57abb9e5'/>
 <Product image='/Products/4.png' name='MARREJ' description='ONE DEAL' price='749' id='66a7142c433cdf5e57abb9eb'/>
 <Product image='/Products/5.png' name='MARREJ' description='Special price UMAMI outdoor kitchen parts 1 + 2' price='199' id='66a714e2433cdf5e57abb9f0'/>

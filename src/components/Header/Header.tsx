@@ -32,7 +32,7 @@ const Header = () => {
                 <Option name={'About Us'} link='/about' />
             </div>
 
-            <div className=' flex justify-center tb:w-[30%] w-full text-3xl '>
+            <div className=' flex tb:static absolute left-0 right-0 mx-auto justify-center tb:w-[30%] w-fit text-3xl '>
                 <Link href={'/'}>
                 MARREJ
                 </Link>
@@ -54,7 +54,8 @@ const Header = () => {
                 </div>
             </div>
 
-            <div className=' peer tb:hidden flex justify-end text-3xl items-center -mr-10'>
+            <div className=' peer tb:hidden flex justify-end text-3xl items-center w-screen -mr-10 gap-6'>
+                <FiShoppingBag className=' text-3xl hover:cursor-pointer' onClick={() => {dispatch(toggle())}}/>
                 <VscThreeBars  onClick={() => dispatch(toggleMenu())}/>
 
             </div>

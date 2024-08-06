@@ -12,22 +12,18 @@ interface ProductProps {
 const Product = (props: ProductProps) => {
     const { image, description, price, name, id} = props;
   return (
-    <Link className=' w-[200px] flex'
+    <Link className=' w-full flex h-fit'
     href={'/product?id=' + id}
     >
-    <div className=' flex flex-col gap-2 group hover:cursor-pointer ml-12 h-full w-[150px]'>
+    <div className=' flex flex-col gap-2 hover:scale-95 hover:cursor-pointer h-fit w-[320px] shadow-md transition-all duration-200'>
 
-        <div>
-            <img src={image} alt=""  className=' tb:w-[150px] tb:h-[150px] h-[150px] w-[150px] group-hover:scale-95 transition-all duration-200'/>
+        <div className=' flex justify-center'>
+            <img src={image} alt=""  className=' tb:w-[320px] tb:h-[320px] h-[150px] w-[150px] transition-all duration-200'/>
         </div>
 
-        <div className=' font-semibold mx-3 text-md tb:text-sm hover:underline transition-all duration-400 w-fit h-fit'>
-            {name.slice(0, 25) + '...'}
+        <div className=' font-semibold mx-3 text-md tb:text-sm hover:underline transition-all duration-400 w-fit h-[3rem] overflow-hidden'>
+            {name.slice(0, 35) + '...'}
         </div>
-
-        {/* <div className=' px-3 text-sm tb:text-sm font-normal text-[#1c1c1c]'>
-            {description.slice(0, 50) + '...'}
-        </div> */}
 
         <div className=' px-3 text-sm tb:text-sm font-bold text-[#913737]'>
             {`$${price}`}
