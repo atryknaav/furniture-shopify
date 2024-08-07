@@ -34,7 +34,7 @@
     ".next/types/**/*.ts",
     "src/components/ProductCarousel/Carousel.jsx",
     "build/types/**/*.ts"
-  ],
+, "src/app/api/renderBoughtItems/route.js"  ],
   "exclude": [
     "node_modules"
   ]

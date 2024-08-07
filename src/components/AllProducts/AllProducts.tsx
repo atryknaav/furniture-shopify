@@ -18,6 +18,7 @@ interface productType {
 }
 
 const AllProducts = () => {
+    const sortByName = useSelector((state: RootState) => state.sortBy.name);
     const sortBy = useSelector((state: RootState) => state.sortBy);
     const [productList, setProductList] = useState<productType[]>([]);
     const [loaded, setLoaded] = useState(false);
@@ -71,7 +72,7 @@ const AllProducts = () => {
                 <SortBy />
             </div>
         </div>
-        {(productList.length != 0)?
+        {(productList.length != 0 && loaded)?
         <div className=' grid-cols-2 tb:grid-cols-6 grid w-[100%] mx-auto gap-y-2 mb-10 p-2'>
             {productList.map((product) => (
                 <div>
@@ -80,7 +81,7 @@ const AllProducts = () => {
             ))}
         </div>
         :
-            <NothingFound />
+            sortByName.length != 0?  <NothingFound /> : ''
         }
         <div className={" w-screen h-screen flex items-center " + hideLoading}>
             <VscLoading  className={" text-6xl animate-spin text-gray-400 m-auto"}/>
