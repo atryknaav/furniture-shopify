@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is an online store for furniture built using modern web technologies. The application allows customers to search for items, add them to their cart, view their balance, adjust the quantity of items, and checkout. Upon checkout, customers receive a receipt via email. The project leverages several technologies including Next.js, React, TypeScript, Redux for state management, MongoDB for the database, Tailwind CSS for styling, and Stripe for payment processing.
+This project is an online store for furniture built using modern web technologies. The application allows customers to search for items, add them to their cart, view their balance, adjust the quantity of items, and checkout. Upon checkout, customers receive a receipt via email. The project leverages several technologies including Next.js, React, TypeScript, Redux for state management, MongoDB for the database, Tailwind CSS for styling, and Stripe for payment processing. <u>This website uses the content of the [Dangarden store](https://dangarden.se/)</u>.
 
 ## [Online version on Vercel](https://marrej-furniture.vercel.app)
 
