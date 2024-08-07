@@ -22,7 +22,6 @@ const ShoppingCart = () => {
       setSiteLoaded(true);
     }, [cartOn])
 
-    const hide = cartOn? ' ' : ' hidden';
     const appear = cartOn? ' animate-appear' : siteLoaded? ' animate-disappear' : ' hidden';
     const drop = cartOn? ' animate-sidedrop' : siteLoaded? ' animate-siderise' : ' hidden';
 
@@ -38,7 +37,6 @@ const ShoppingCart = () => {
             setTotalOn(' hidden');
             setAreItems(false);
         }
-        console.log(totalOn)
     }, [shpCart.products.length])
 
      return (

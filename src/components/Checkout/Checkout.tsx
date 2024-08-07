@@ -74,10 +74,10 @@ const CheckoutPage = () => {
           const responseData = await response.json();
           console.log(responseData['message'])
     
-          alert('Message successfully sent');
+          
       } catch (err) {
           console.error(err);
-          alert("Error, please try resubmitting the form");
+          
       }
     
     if (!stripe || !elements) {
@@ -135,6 +135,8 @@ const CheckoutPage = () => {
             <label htmlFor="email" className=" text-black font-light text-left">Email:</label>
             <input type="text" required  className=" border-[1px] rounded-md text-md p-2 font-light text-black" value={email} onChange={(e) => (setEmail(e.target.value))}/>
         </div>}
+
+        <p className=" text-[#35353565]">Use 4242 4242 4242 4242 cart to test</p>
       {clientSecret && <PaymentElement />}
         
       {errorMessage && <div className=" text-black">{errorMessage}</div>}

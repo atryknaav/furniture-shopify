@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-import { FaArrowUp, FaPinterest } from 'react-icons/fa'
+import { FaArrowUp, FaGithub, FaLinkedin, FaPinterest } from 'react-icons/fa'
 import { FaFacebook, FaInstagram, FaTiktok, FaTwitter } from 'react-icons/fa6'
 import { GoArrowUp } from 'react-icons/go'
 import { MdLanguage } from 'react-icons/md'
@@ -13,7 +13,7 @@ const Footer = () => {
 
         <div className='h-fit p-12 flex gap-[2rem] tb:gap-[12rem] justify-between'>
 
-            <div className=' flex flex-col gap-4'>
+            <div className=' hover:cursor-pointer flex flex-col gap-4'>
                 <div className=' text-sm tb:text-xl font-semibold mb-2'>
                     Information
                 </div>
@@ -35,7 +35,7 @@ const Footer = () => {
 
 
 
-            <div className=' flex flex-col gap-4'>
+            <div className=' hover:cursor-pointer flex flex-col gap-4'>
                 <div className=' text-sm tb:text-xl font-semibold mb-2'>
                     Conditions
                 </div>
@@ -57,7 +57,7 @@ const Footer = () => {
 
 
 
-            <div className=' sm:flex flex-col gap-4 hidden'>
+            <div className=' hover:cursor-pointer sm:flex flex-col gap-4 hidden'>
                 <div className=' text-sm tb:text-xl font-semibold mb-2'>
                     Address
                 </div>
@@ -75,11 +75,12 @@ const Footer = () => {
                     Follow Us
                 </div>
                 <div className='  text-2xl flex-col sm:flex-row tb:text-3xl font-normal flex gap-3'>
-                    <FaFacebook />
-                    <FaInstagram />
-                    <FaTwitter />
-                    <FaTiktok />
-                    <FaPinterest />
+                    <a href="https://github.com/atryknaav">
+                        <FaGithub />
+                    </a>
+                    <a href="https://www.linkedin.com/in/arsenii-bilyi-46820a284/">
+                        <FaLinkedin />
+                    </a>
                 </div>
             </div>
 
@@ -96,12 +97,8 @@ const Footer = () => {
 
         <div className=' h-fit border-t-[1px] border-white flex justify-between px-12 py-6'>
             
-            <div className='  text-smttb:ext-3xl'>
-                <div className=' border-[1px] rounded-full border-white p-3 hover:bg-white hover:text-black transition duration-500 '>
-
-                <MdLanguage />
-
-                </div>
+            <div className='  text-sm tb:text-3xl'>
+                
             </div>
 
             <div className='  text-2xl tb:text-4xl flex items-center'>

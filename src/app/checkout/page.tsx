@@ -1,15 +1,17 @@
 'use client';
 
-import React from "react";
+import React, { useReducer } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutPage from "@/components/Checkout/Checkout"
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
 
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
 export default function Home() {
-  const amount = 49.99;
+  const amount = useSelector((state: RootState) => state.shoppingCart.total);
 
   return(
     <main className="max-w-6xl mx-auto p-10 text-white text-center border m-10 rounded-md bg-gradient-to-tr from-amber-400 to-lime-700">

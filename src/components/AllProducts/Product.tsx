@@ -15,7 +15,7 @@ const Product = (props: ProductProps) => {
     <Link className=' w-full flex h-fit'
     href={'/product?id=' + id}
     >
-    <div className=' flex flex-col gap-2 hover:scale-95 hover:cursor-pointer h-fit w-[320px] shadow-md transition-all duration-200'>
+    <div className=' flex flex-col gap-2 hover:scale-95 hover:cursor-pointer h-fit w-[320px] shadow-md transition-all duration-200 active:cursor-wait'>
 
         <div className=' flex justify-center'>
             <img src={image} alt=""  className=' tb:w-[320px] tb:h-[320px] h-[150px] w-[150px] transition-all duration-200'/>

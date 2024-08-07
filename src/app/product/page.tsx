@@ -30,7 +30,6 @@ export default function Home() {
   
     const fetchProducts = async () => {
       const id = searchParams.get('id'); 
-      console.log("URL ID: " + id);
 
       try {
         const res = await fetch(`/api/getProduct?id=${id}`, {
@@ -46,7 +45,6 @@ export default function Home() {
 
         const data = await res.json();
         const products = data.products;
-        console.log("This is the name of product: " + products + ", with the type of " + typeof products);
 
         setName(products.name);
         setDesc(products.description);

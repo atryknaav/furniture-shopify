@@ -41,7 +41,6 @@ const AllProducts = () => {
   
           const data = await res.json();
           const products = data.products;
-          console.log("This is the name of product: " + products + ", with the type of " + typeof products);
           setProductList(products);
           setLoaded(true);
         }

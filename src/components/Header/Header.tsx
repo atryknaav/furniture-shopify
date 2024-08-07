@@ -25,14 +25,13 @@ const Header = () => {
     <StoreProvider>
     <div className=' flex-col flex select-none'>
         <div className=' flex justify-between text-lg gap-30 py-4 px-14 fixed  w-screen shadow-md top-0 left-0 z-20 bg-white'>
-            <div className=' tb:flex justify-between w-[35%] hidden'>
+            <div className=' tb:flex justify-start gap-20 w-[35%] hidden'>
                 <Option name={'Products'} link='/all-products'/>
-                <Option name={'Outdoor Furniture'} link='/outdoor' />
                 <Option name={'Our Material'} link='/material' />
-                <Option name={'About Us'} link='/about' />
+          
             </div>
 
-            <div className=' flex tb:static absolute left-0 right-0 mx-auto justify-center tb:w-[30%] w-fit text-3xl '>
+            <div className=' flex tb:static absolute left-0 right-0 mx-auto justify-center tb:w-[30%] w-fit text-3xl active:cursor-wait'>
                 <Link href={'/'}>
                 MARREJ
                 </Link>
@@ -42,14 +41,10 @@ const Header = () => {
 
                 <SearchBar />
 
-                <select name="currency" id="currency-select" className=' font-bold'>
-                    <option value="usd">USD$</option>
-                    <option value="eur">EUR&#8364;</option>
-                    <option value="uah">UAH&#8372;</option>
-                </select>
+               
 
                 <div className=' flex gap-6 items-center'>
-                    <BiHeart className=' text-3xl'/>
+                   
                     <FiShoppingBag className=' text-3xl hover:cursor-pointer' onClick={() => {dispatch(toggle())}}/>
                 </div>
             </div>

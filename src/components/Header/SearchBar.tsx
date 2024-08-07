@@ -14,7 +14,6 @@ interface productType {
 
 const SearchBar = () => {
     const [productList, setProductList] = useState<productType[]>([]);
-    const [productName, setProductName] = useState('');
     const [inputValue, setInputValue] = useState('');
     
     const dispatch = useDispatch();
@@ -37,9 +36,7 @@ const SearchBar = () => {
   
           const data = await res.json();
           const products = data.products;
-          console.log("This is the name of product: " + products + ", with the type of " + typeof products);
           setProductList(products);
-        //   setProductName(products.)
         }
         catch(err){
             console.error('Error fetching products:', err);
@@ -50,7 +47,6 @@ const SearchBar = () => {
         <input type="text" placeholder='What are you looking for?' value={inputValue} className=' outline-none w-full border-b-2 border-black px-3 text-center tb:text-left' onChange={(e) => {
             setInputValue(e.target.value);
             searchProducts(e.target.value);
-            console.log('requested')
             if(e.target.value.length === 0)setProductList([]);
         
     
