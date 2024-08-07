@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Marrej Furniture Online Store Project
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project is an online store for furniture built using modern web technologies. The application allows customers to search for items, add them to their cart, view their balance, adjust the quantity of items, and checkout. Upon checkout, customers receive a receipt via email. The project leverages several technologies including Next.js, React, TypeScript, Redux for state management, MongoDB for the database, Tailwind CSS for styling, and Stripe for payment processing.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![Project Overview](public/readme/1.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js:** A React framework for server-side rendering, static site generation, and optimized performance.
+- **React:** A JavaScript library for building user interfaces.
+- **TypeScript:** A typed superset of JavaScript that adds static types.
+- **Redux:** A state management library for managing application state.
+- **MongoDB:** A NoSQL database for storing product and user information.
+- **Tailwind CSS:** A utility-first CSS framework for quick and efficient styling.
+- **Stripe:** A payment processing platform for handling transactions.
+- **Nodemailer:** A library for sending emails, used here to email receipts to customers.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-## Learn More
+### Product Search
+Customers can search for furniture items using a search bar. The results are fetched from the MongoDB database.
 
-To learn more about Next.js, take a look at the following resources:
+### Shopping Cart
+Customers can add items to their cart, view the total balance, and adjust the quantity of each item (add, subtract, or remove from the cart).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Checkout
+At checkout, customers can enter their payment information and process their payment through Stripe. Once the payment is successful, a receipt is emailed to the customer using Nodemailer.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### State Management
+Redux is used to manage the state of the shopping cart, ensuring that the cart's state is consistent across the application.
 
-## Deploy on Vercel
+### Multi-Platform Rendering
+The application is designed to render seamlessly on multiple platforms, including PCs, tablets, and phones. This is achieved through responsive design practices and Tailwind CSS, ensuring an optimal user experience across all devices.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Database Management
+MongoDB is used to store product information. Mongoose is used to define schemas and interact with the MongoDB database.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Styling
+Tailwind CSS is used for quick and efficient styling, allowing for a responsive and visually appealing user interface.
+
+## Images
+### Product carousel
+![Project Overview](public/readme/2.png)
+### Searching for product and sorting the results by their price
+![Project Overview](public/readme/3.png)
+### Adding a product to cart
+![Project Overview](public/readme/4.png)
+### Checkout screen
+![Project Overview](public/readme/5.png)
+### After successful payment
+![Project Overview](public/readme/6.png)
+
+## Mobile version
+### Product list
+![Project Overview](public/readme/7.png)
+### Menu
+![Project Overview](public/readme/8.png)
+
+
+
+## Conclusion
+
+This project demonstrates how to build a comprehensive e-commerce application using a modern tech stack. By leveraging Next.js, React, TypeScript, Redux, MongoDB, Tailwind CSS, Stripe, and Nodemailer, we've created a fully functional online furniture store with efficient state management, secure payments, and responsive design.
