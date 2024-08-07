@@ -4,6 +4,8 @@
 
 This project is an online store for furniture built using modern web technologies. The application allows customers to search for items, add them to their cart, view their balance, adjust the quantity of items, and checkout. Upon checkout, customers receive a receipt via email. The project leverages several technologies including Next.js, React, TypeScript, Redux for state management, MongoDB for the database, Tailwind CSS for styling, and Stripe for payment processing.
 
+## [Online version on Vercel](https://marrej-furniture.vercel.app/all-products)
+
 ![Project Overview](public/readme/1.png)
 
 ## Technologies Used
