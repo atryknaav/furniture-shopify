@@ -13,6 +13,7 @@ This project is an online store for furniture built using modern web technologie
 - **Next.js:** A React framework for server-side rendering, static site generation, and optimized performance.
 - **React:** A JavaScript library for building user interfaces.
 - **TypeScript:** A typed superset of JavaScript that adds static types.
+- **Node.js:** A JavaScript runtime for building fast, scalable server-side applications.
 - **Redux:** A state management library for managing application state.
 - **MongoDB:** A NoSQL database for storing product and user information.
 - **Tailwind CSS:** A utility-first CSS framework for quick and efficient styling.
